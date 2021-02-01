@@ -7,5 +7,67 @@
 body{
   width: 100%;
   height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+
+}
+
+.left{
+  width: 40%;
+  background-color: green;
+  border-right: 1px solid lightgrey;
+}
+
+.left , .right{
+  float: left;
+  height: 100%;
+}
+
+.right{
+  width: 100%;
+  background-color: green;
+  border-right: 1px solid lightgrey;
+}
+
+
+.header-left, .header-right{
+  width: 100%;
+  height: 60px;
+  background-color: blue;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.user img {
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.user span {
+  flex-grow: 1;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.user .options {
+  font-size: 20px;
+  color: lightgrey;
+}
+
+.options i {
+  padding-right: 10px;
 }
