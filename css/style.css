@@ -45,6 +45,7 @@ body{
   background-color: blue;
 }
 
+/* USER */
 .user {
   display: flex;
   align-items: center;
@@ -70,4 +71,44 @@ body{
 
 .options i {
   padding-right: 10px;
+}
+
+
+/* NOTIFICHE */
+.notifications {
+  display: flex;
+  background-color: rgb(123, 212, 224);
+}
+
+.notifications i {
+  font-size: 30px;
+  margin-left: 15px;
+  margin-right: 10px;
+  padding: 10px 6px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 50%;
+  color: rgb(123, 212, 224);
+  cursor: pointer;
+}
+
+.notifications-text {
+  flex-grow: 1;
+}
+
+.notifications-text .top{
+ padding-top: 18px;
+ font-size: 15px;
+}
+
+.notifications-text > p {
+  left: 15px;
+}
+
+.notifications-text  .bottom {
+  font-size: 15px;
+  color: grey;
+  text-decoration: underline;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
