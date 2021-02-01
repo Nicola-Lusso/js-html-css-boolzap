@@ -11,6 +11,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  background: linear-gradient( rgb(41, 233, 199) 20px ,rgb(221, 219, 208), rgb(211, 220, 221));
 }
 
 .container{
@@ -23,7 +24,7 @@ body{
 
 .left{
   width: 40%;
-  background-color: green;
+  /* background-color: green; */
   border-right: 1px solid lightgrey;
 }
 
@@ -34,7 +35,7 @@ body{
 
 .right{
   width: 100%;
-  background-color: green;
+  /* background-color: green; */
   border-right: 1px solid lightgrey;
 }
 
@@ -42,7 +43,7 @@ body{
 .header-left, .header-right{
   width: 100%;
   height: 60px;
-  background-color: blue;
+  background-color: rgb(235, 235, 235);
 }
 
 /* USER */
@@ -66,7 +67,7 @@ body{
 
 .user .options {
   font-size: 20px;
-  color: lightgrey;
+  color: darkgrey;
 }
 
 .options i {
@@ -111,4 +112,137 @@ body{
   text-decoration: underline;
   padding-bottom: 5px;
   cursor: pointer;
+}
+
+/* SEARCH */
+.searchbar {
+  padding: 10px;
+  background-color: rgb(235, 235, 235);
+}
+
+.search-container {
+  padding: 10px 0 10px 15px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.search-container i {
+  font-size: 20px;
+  color: lightgrey;
+  cursor: pointer;
+}
+
+.search-container input {
+  margin-left: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 10px;
+}
+
+
+/* CONTATTI */
+.contacts {
+  flex-grow: 1;
+  background-color: white;
+  overflow-y: scroll;
+  height: calc(100% - 200px);
+  max-height: 450px;
+}
+
+.contact {
+  padding: 10px;
+  display: flex;
+  font-size: 17px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.contacts .contact:hover {
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+.contact img {
+  width: 65px;
+  border-radius: 50%;
+}
+
+.friends {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* HEADER-RIGHT */
+.header-right {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+.chat-img img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.chat-contact {
+  flex-grow: 1;
+  padding-left: 15px;
+}
+
+.chat-contact .name {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+.chat-contact .info{
+  color: darkgrey;
+  font-size: 15px;
+}
+
+.chat-options {
+  font-size: 25px;
+}
+
+.chat-options i {
+  padding-right: 15px;
+  color: darkgrey;
+}
+
+/* CHAT-CONTAINER */
+.chat-container{
+  height: calc(100% - 100px);
+  max-height: 500px;
+  flex-grow: 1;
+  background-image: url("../img/mine.jpg");
+  background-size: auto;
+  overflow-y: scroll;
+}
+
+
+/* FOOTER-CHAT */
+.footer-chat {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+
+}
+
+.footer-chat i {
+  font-size: 30px;
+  padding: 0 30px;
+  color: grey;
+}
+
+.message {
+  flex-grow: 1;
+}
+
+.message input{
+  height: 60px;
+  width: 100%;
+  font-size: 17px;
 }
