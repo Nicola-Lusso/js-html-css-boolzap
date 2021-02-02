@@ -29,6 +29,7 @@ var app = new Vue({
     ]
   },
   methods: {
+    
     // cambiare contatto
     changeChat(index) {
       if(this.contacts[index].chat != true) {
