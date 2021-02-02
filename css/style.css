@@ -14,6 +14,10 @@ body{
   background: linear-gradient( rgb(41, 233, 199) 20px ,rgb(221, 219, 208), rgb(211, 220, 221));
 }
 
+i{
+  cursor: pointer;
+}
+
 .container{
   width: 80%;
   height: 90%;
@@ -223,6 +227,31 @@ body{
   background-image: url("../img/mine.jpg");
   background-size: auto;
   overflow-y: scroll;
+}
+
+.text {
+  padding: 30px;
+}
+
+.text .message {
+  position: relative;
+  max-width: 200px;
+  font-size: 18px;
+  margin: 5px 0;
+  padding: 15px 20px 20px 20px;
+  border-radius: 20px;
+}
+
+.text .sent{
+  clear: both;
+  float: right;
+  background-color: rgba(86, 218, 119, 0.92);
+}
+
+.text .received{
+  clear: both;
+  margin-top: 90px;
+  background-color: white;
 }
 
 
