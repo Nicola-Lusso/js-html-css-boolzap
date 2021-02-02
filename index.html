@@ -6,19 +6,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>Whatsapp web</title>
   </head>
   <body>
     <!-- Inizio Container -->
-    <div class="container">
+    <div class="container" id="app">
 
       <!-- Inizio Sezione SX -->
       <section class="left">
 
         <div class="header-left">
           <div class="user">
-            <img src="img/avatar_io.jpg" alt="">
-            <span>Nome Utente</span>
+
+            <div class="user-img">
+              <img :src="user.img" alt="user-img">
+            </div>
+
+            <div class="user-name">
+              <span>{{ user.name }}</span>
+            </div>
+
           <div class="options">
             <i class="fas fa-circle-notch"></i>
             <i class="fas fa-comment-alt"></i>
@@ -56,29 +64,13 @@
 
         <!-- CONTATTI -->
         <div class="contacts">
-          <div class="contact">
+          <div v-for="(contact, index) in contacts" class="contact" :class="(contact.chat) ? 'active' : ''" @click="changeChat(index)" >
             <div class="contact-img">
-              <img src="img/avatar_1.jpg" alt="">
+              <img :src="contact.img" alt="contact-img">
             </div>
-            <p class="friends">Michele</p>
-          </div>
-          <div class="contact">
-            <div class="contact-img">
-              <img src="img/avatar_2.jpg" alt="">
+            <div class="contact-chatbox">
+              {{ contact.name }}
             </div>
-            <p class="friends">Fabio</p>
-          </div>
-          <div class="contact">
-            <div class="contact-img">
-              <img src="img/avatar_3.jpg" alt="">
-            </div>
-            <p class="friends">Samuele</p>
-          </div>
-          <div class="contact">
-            <div class="contact-img">
-              <img src="img/avatar_4.jpg" alt="">
-            </div>
-            <p class="friends">Luisa</p>
           </div>
         </div>
 
@@ -88,13 +80,13 @@
       <!-- Inizio Sezione DX -->
       <section class="right">
 
-        <div class="header-right">
+        <div class="header-right" v-for="contact in contacts" v-if="contact.chat">
           <div class="chat-img">
-            <img src="img/avatar_1.jpg" alt="contact-img">
+            <img :src="contact.img" alt="contact-img">
           </div>
           <div class="chat-contact">
             <div class="name">
-              Michele
+              {{ contact.name }}
             </div>
             <div class="info">
               Ultimo accesso alle 12:24
@@ -141,6 +133,6 @@
 
     </div>
     <!-- /Container -->
-
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
