@@ -1,6 +1,7 @@
 var app = new Vue({
   el: "#app",
   data: {
+    contatore: 0,
     user: {
       name: "Michele",
       img: "img/avatar_3.jpg"
@@ -112,19 +113,8 @@ var app = new Vue({
 
     // cambiare contatto
     changeChat(index) {
-      if(this.contacts[index].chat != true) {
-
-        const contact = this.contacts.splice(index, 1)[0];
-        contact.chat = true
-
-        this.contacts.forEach((element) => {
-          if(element.chat == true) {
-            element.chat = false;
-          }
-        });
-
-        this.contacts.splice(index, 0, contact);
-      }
+      this.contatore = index;
+    
     }
   }
 });

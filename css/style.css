@@ -258,6 +258,13 @@ i{
   background-color: white;
 }
 
+.message-time {
+  position: absolute;
+  bottom: 2px;
+  float: right;
+  font-size: 9px;
+  color: grey;
+}
 
 /* FOOTER-CHAT */
 .footer-chat {
