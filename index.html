@@ -106,10 +106,13 @@
           <div class="text">
             <div class="message" v-for=" message in contacts[contatore].messages" :class="(message.status == 'sent') ? 'sent' : ' received' ">
                {{ message.text }}
-             </div>
-             <div class="message-time" v-for=" data in contacts[contatore].date">
+
+                <div class="message-time">
                 {{ message.date }}
-              </div>
+                </div>
+
+
+             </div>
 
           </div>
         </div>
