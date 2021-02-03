@@ -82,11 +82,11 @@
 
         <div class="header-right" v-for="contact in contacts" v-if="contact.chat">
           <div class="chat-img">
-            <img :src="contact.img" alt="contact-img">
+            <img :src="contacts[contatore].img" alt="contact-img">
           </div>
           <div class="chat-contact">
             <div class="name">
-              {{ contact.name }}
+              {{ contacts[contatore].name }}
             </div>
             <div class="info">
               Ultimo accesso alle 12:24
