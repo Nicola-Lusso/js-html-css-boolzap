@@ -246,13 +246,13 @@ i{
   border-radius: 20px;
 }
 
-.text .sent{
+.sent{
   clear: both;
   float: right;
   background-color: rgba(86, 218, 119, 0.92);
 }
 
-.text .received{
+.received{
   clear: both;
   margin-top: 90px;
   background-color: white;
@@ -274,11 +274,11 @@ i{
   color: grey;
 }
 
-.message {
+.message-input {
   flex-grow: 1;
 }
 
-.message input{
+.message-input input{
   height: 60px;
   width: 100%;
   font-size: 17px;
