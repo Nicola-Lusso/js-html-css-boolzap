@@ -249,6 +249,7 @@ i{
 .sent{
   clear: both;
   float: right;
+  min-width: 250px;
   background-color: rgba(86, 218, 119, 0.92);
 }
 
