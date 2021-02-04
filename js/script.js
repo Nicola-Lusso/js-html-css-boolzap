@@ -128,9 +128,9 @@ var app = new Vue({
       };
       this.contacts[this.contatore].messages.push(nuovoMessaggio);
       this.newText='';
+      setTimeout(this.receivedMessage, 2000)
 
     },
-    setTimeout(this.receivedMessage, 2000)
     receivedMessage(){
 
       let rispostaMessaggio = {
@@ -139,11 +139,11 @@ var app = new Vue({
         status: 'received'
       };
       this.contacts[this.contatore].messages.push(rispostaMessaggio);
-    }
+    },
 
       // this.contacts[this.contatore].messages.push(rispostaMessaggio);
       // setTimeout(this.newText, 1000);
-    }
-
   }
+
+
 });
