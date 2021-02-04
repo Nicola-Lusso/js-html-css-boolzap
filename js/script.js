@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     contatore: 0,
     newText:'',
+    answerText: 'ok',
     user: {
       name: "Michele",
       img: "img/avatar_3.jpg"
@@ -125,9 +126,16 @@ var app = new Vue({
         text: this.newText,
         status: 'sent'
       }
+      let rispostaMessaggio={
+         date: '04/02/2020 10:50:32',
+         text: this.answerText,
+         status: 'received'
+       }
 
       this.contacts[this.contatore].messages.push(nuovoMessaggio);
       this.newText='';
+      this.contacts[this.contatore].messages.push(rispostaMessaggio);
+      setTimeout(this.rispostaMessaggio, 1000);
     }
 
   }
