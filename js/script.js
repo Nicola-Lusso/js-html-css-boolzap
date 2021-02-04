@@ -125,17 +125,20 @@ var app = new Vue({
         date: '04/02/2020 10:50:31',
         text: this.newText,
         status: 'sent'
-      }
-      let rispostaMessaggio={
-         date: '04/02/2020 10:50:32',
-         text: this.answerText,
-         status: 'received'
-       }
-
+      };
       this.contacts[this.contatore].messages.push(nuovoMessaggio);
       this.newText='';
-      this.contacts[this.contatore].messages.push(rispostaMessaggio);
-      setTimeout(this.rispostaMessaggio, 1000);
+      let rispostaMessaggio = {
+         date: '04/02/2020 10:50:32',
+         text: 'ok',
+         status: 'received'
+       };
+       setInterval(function(){
+        this.contacts[this.contatore].messages.push(rispostaMessaggio);
+      }, 2000)
+
+      // this.contacts[this.contatore].messages.push(rispostaMessaggio);
+      // setTimeout(this.newText, 1000);
     }
 
   }
