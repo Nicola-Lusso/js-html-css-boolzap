@@ -2,6 +2,7 @@ var app = new Vue({
   el: "#app",
   data: {
     contatore: 0,
+    newText:'',
     user: {
       name: "Michele",
       img: "img/avatar_3.jpg"
@@ -108,13 +109,26 @@ var app = new Vue({
       }
     ],
 
+
   },
   methods: {
 
     // cambiare contatto
     changeChat(index) {
       this.contatore = index;
-    
+
+    },
+
+    newMessage(){
+      let nuovoMessaggio={
+        date: '04/02/2020 10:50:31',
+        text: this.newText,
+        status: 'sent'
+      }
+
+      this.contacts[this.contatore].messages.push(nuovoMessaggio);
+      this.newText='';
     }
+
   }
 });
