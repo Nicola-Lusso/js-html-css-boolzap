@@ -128,14 +128,18 @@ var app = new Vue({
       };
       this.contacts[this.contatore].messages.push(nuovoMessaggio);
       this.newText='';
+
+    },
+    setTimeout(this.receivedMessage, 2000)
+    receivedMessage(){
+
       let rispostaMessaggio = {
-         date: '04/02/2020 10:50:32',
-         text: 'ok',
-         status: 'received'
-       };
-       setInterval(function(){
-        this.contacts[this.contatore].messages.push(rispostaMessaggio);
-      }, 2000)
+        date: '04/02/2020 10:50:32',
+        text: 'ok',
+        status: 'received'
+      };
+      this.contacts[this.contatore].messages.push(rispostaMessaggio);
+    }
 
       // this.contacts[this.contatore].messages.push(rispostaMessaggio);
       // setTimeout(this.newText, 1000);
